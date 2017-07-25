@@ -128,7 +128,7 @@
     * Click Show Access Keys
     * Copy Key 1. It will be used later.
 
-Here is an example of how to use the bing search cognitive services.
+    * Here is an example of how to use the bing search cognitive services.
 
     ```csharp
             public static async Task<List<NewsResult>> GetHikingNews()
@@ -150,7 +150,7 @@ Here is an example of how to use the bing search cognitive services.
 
 1. Place the Key into your console application. It needs to go in the search class here.
 
-<span style="background-color: #FFFF00">webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</span>
+    * <span style="background-color: #FFFF00">webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</span>
 
 1. Run your application and view the results.
 
