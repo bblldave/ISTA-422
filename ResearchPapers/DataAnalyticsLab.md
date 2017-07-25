@@ -63,7 +63,8 @@
 1. Name the class Search.cs
 1. Add the following using statements to the Search class
 
-    ``` using Newtonsoft.Json;
+    ``` 
+   using Newtonsoft.Json;
    using System.IO;
    using System.Net.Http;
     ```
