@@ -102,7 +102,7 @@
         Console.ReadLine();
     ```
 
-1.This should display the headlines for each result.
+1. This should display the headlines for each result.
 
 
 
