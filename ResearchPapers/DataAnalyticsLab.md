@@ -131,7 +131,6 @@
 Here is an example of how to use the bing search cognitive services.
 
     ```csharp
-    
      public static async Task<List<NewsResult>> GetHikingNews()
             {
                 var results = new List<NewsResult>();
@@ -149,7 +148,7 @@ Here is an example of how to use the bing search cognitive services.
             }
     ```
 1. Place the Key into your console application. It needs to go in the search class here.
-<mark>webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</mark>
+<span style="background-color: #FFF00">webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</span>
 
 1. Run your application and view the results.
 
