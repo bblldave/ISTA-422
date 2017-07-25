@@ -150,7 +150,7 @@
 
 1. Place the Key into your console application. It needs to go in the search class here.
 
-    * <span style="background-color: #FFFF00">webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</span>
+    * <pre>webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", <b>"Add Your Key here"</b>);</pre>
 
 1. Run your application and view the results.
 
