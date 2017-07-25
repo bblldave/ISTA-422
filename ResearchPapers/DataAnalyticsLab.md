@@ -17,7 +17,8 @@
 1. Click Newtonsoft.Json package. Click Install. Click ok when box opens.
 1. Add the following code to the NewsSearch class
 
-    ``` class NewsSearch
+    ``` 
+    class NewsSearch
     {
             public string _type { get; set; }
             public string readLink { get; set; }
@@ -71,7 +72,8 @@
 
 1. Add the following code to the Search Class
 
-    ```  public static async Task<List<NewsResult>> GetHikingNews()
+    ```  
+	public static async Task<List<NewsResult>> GetHikingNews()
         {
             var results = new List<NewsResult>();
             var webClient = new HttpClient();
@@ -90,14 +92,15 @@
 
 1. In the solution explorer, double click Program.cs.
 1. Add the following code to the Main Meathod.
-    ''' var results = Search.GetHikingNews().Result;
-            for (int i = 0; i < results.Count; i++)
-            {
-                Console.WriteLine(results[i].Headline);
-            }
+    ``` 
+        var results = Search.GetHikingNews().Result;
+        for (int i = 0; i < results.Count; i++)
+        {
+            Console.WriteLine(results[i].Headline);
+        }
 
-            Console.ReadLine();
-    '''
+        Console.ReadLine();
+    ```
 
 1.This should display the headlines for each result.
 
