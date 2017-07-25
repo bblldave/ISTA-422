@@ -130,7 +130,7 @@
 
 Here is an example of how to use the bing search cognitive services.
 
-![alt text](https://github.com/bblldave/ISTA-422/blob/master/ResearchPapers/CodePic.png "Bing Search Cognitive Service Code")
+    ![alt text](https://github.com/bblldave/ISTA-422/blob/master/ResearchPapers/CodePic.png "Bing Search Cognitive Service Code")
 
 1. Place the Key into your console application. It needs to go in the search class here.
 'webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");'
