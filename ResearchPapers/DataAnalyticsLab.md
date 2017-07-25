@@ -17,7 +17,7 @@
 1. Click Newtonsoft.Json package. Click Install. Click ok when box opens.
 1. Add the following code to the NewsSearch class
 
-```class NewsSearch
+    ``` class NewsSearch
     {
             public string _type { get; set; }
             public string readLink { get; set; }
@@ -57,20 +57,20 @@
             public string _type { get; set; }
             public string name { get; set; }
         }
-```
+    ```
 
 1. Right click BingSearchLab project and select add class.
 1. Name the class Search.cs
 1. Add the following using statements to the Search class
 
-```using Newtonsoft.Json;
+    ``` using Newtonsoft.Json;
    using System.IO;
    using System.Net.Http;
-'''
+    '''
 
 1. Add the following code to the Search Class
 
-```  public static async Task<List<NewsResult>> GetHikingNews()
+    ```  public static async Task<List<NewsResult>> GetHikingNews()
         {
             var results = new List<NewsResult>();
             var webClient = new HttpClient();
@@ -85,18 +85,18 @@
             }
             return results;
         }
-```
+    ```
 
 1. In the solution explorer, double click Program.cs.
 1. Add the following code to the Main Meathod.
-'''var results = Search.GetHikingNews().Result;
+    ''' var results = Search.GetHikingNews().Result;
             for (int i = 0; i < results.Count; i++)
             {
                 Console.WriteLine(results[i].Headline);
             }
 
             Console.ReadLine();
-'''
+    '''
 
 1.This should display the headlines for each result.
 
