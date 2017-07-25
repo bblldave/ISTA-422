@@ -17,7 +17,7 @@
 1. Click Newtonsoft.Json package. Click Install. Click ok when box opens.
 1. Add the following code to the NewsSearch class
 
-    ``` 
+    ```csharp 
     class NewsSearch
     {
             public string _type { get; set; }
@@ -64,7 +64,7 @@
 1. Name the class Search.cs
 1. Add the following using statements to the Search class
 
-    ``` 
+    ```csharp 
    using Newtonsoft.Json;
    using System.IO;
    using System.Net.Http;
@@ -72,7 +72,7 @@
 
 1. Add the following code to the Search Class
 
-    ```  
+    ```csharp  
 	public static async Task<List<NewsResult>> GetHikingNews()
         {
             var results = new List<NewsResult>();
@@ -92,7 +92,7 @@
 
 1. In the solution explorer, double click Program.cs.
 1. Add the following code to the Main Meathod.
-    ``` 
+    ```csharp
         var results = Search.GetHikingNews().Result;
         for (int i = 0; i < results.Count; i++)
         {
@@ -130,10 +130,26 @@
 
 Here is an example of how to use the bing search cognitive services.
 
-    ![alt text](https://github.com/bblldave/ISTA-422/blob/master/ResearchPapers/CodePic.png "Bing Search Cognitive Service Code")
-
+    ```csharp
+    
+     public static async Task<List<NewsResult>> GetHikingNews()
+            {
+                var results = new List<NewsResult>();
+                var webClient = new HttpClient();
+                webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "f503d1c5394c48dda397a1da5f6b9642");
+                byte[] searchResults = await webClient.GetByteArrayAsync("https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=hiking&mkt=en-us");
+                var serializer = new JsonSerializer();
+                using (var stream = new MemoryStream(searchResults))
+                using (var reader = new StreamReader(stream))
+                using (var jsonReader = new JsonTextReader(reader))
+                {
+                    results = serializer.Deserialize<NewsSearch>(jsonReader).NewsResult;
+                }
+                return results;
+            }
+    ```
 1. Place the Key into your console application. It needs to go in the search class here.
-'webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");'
+<mark>webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</mark>
 
 1. Run your application and view the results.
 
