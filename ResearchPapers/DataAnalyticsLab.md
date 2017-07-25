@@ -131,11 +131,11 @@
 Here is an example of how to use the bing search cognitive services.
 
     ```csharp
-     public static async Task<List<NewsResult>> GetHikingNews()
+        public static async Task<List<NewsResult>> GetHikingNews()
             {
                 var results = new List<NewsResult>();
                 var webClient = new HttpClient();
-                webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "f503d1c5394c48dda397a1da5f6b9642");
+                webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add your key here");
                 byte[] searchResults = await webClient.GetByteArrayAsync("https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=hiking&mkt=en-us");
                 var serializer = new JsonSerializer();
                 using (var stream = new MemoryStream(searchResults))
@@ -148,7 +148,7 @@ Here is an example of how to use the bing search cognitive services.
             }
     ```
 1. Place the Key into your console application. It needs to go in the search class here.
-<span style="background-color: #FFF00">webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</span>
+<span style="background-color: #FFFF00">webClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "Add Your Key here");</span>
 
 1. Run your application and view the results.
 
